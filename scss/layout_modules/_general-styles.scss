@@ -1,0 +1,345 @@
+body, html {
+  height: auto;
+  &.no-scroll {
+    overflow: hidden;
+  }
+  &.no-horizontal-scroll {
+    overflow-y: hidden;
+  }
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+
+  &.is-loaded {
+    .page__content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @include respond(1024) {
+    &.is-loading {
+      overflow: hidden;
+      .page__content {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.page__content {
+
+}
+
+.page-nav {
+  position: fixed;
+  right: 15px;
+  top: 8%;
+  z-index: 5;
+  opacity: 0.75;
+  @include transition(0.3s all ease);
+  &:hover, &:focus, &:active {
+    opacity: 1;
+  }
+  @include respond(1024) {
+    right: 20px;
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 830px) and(max-height: 650px) and (orientation: landscape) {
+  .page-nav {
+    right: 20px;
+    top: 20px;
+  }
+}
+
+.page-nav__list {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.page-nav__list-item {
+  display: block;
+  border-radius: 50%;
+  @include square(12px);
+  background-color: #e2e3e5;
+  margin-bottom: 8px;
+  @include center();
+  @include transition(0.3s all ease);
+  &:first-of-type {
+    border-radius: 0 !important;
+    background: url('#{$imgUrl}logo-nav.svg') no-repeat center /contain;
+    @include square(30px);
+    margin-bottom: 20px;
+    &:hover, &:focus, &:active, &.is-active {
+      background-color: transparent;
+    }
+    @include respond(570) {
+      @include square(24px);
+      display: block;
+    }
+  }
+  &:hover, &:focus, &:active, &.is-active {
+    background-color: $colorRed;
+  }
+
+  &.show-in-mob {
+    display: none;
+  }
+
+  @include respond(570) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 830px) and(max-height: 650px) and (orientation: landscape) {
+  .page-nav__list-item {
+    display: none;
+    &:first-of-type {
+      display: block;
+      @include square(22px);
+    }
+  }
+}
+
+.page-nav__list-link {
+  display: block;
+  @include square(100%);
+}
+
+.arrow__down {
+  display: block;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25px;
+  height: 25px;
+  @include rotate(45deg);
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  @include transition(0.4s all ease);
+  z-index: 5;
+  &.dark {
+    border-color: $bodyBackground;
+  }
+  &.light {
+    border-color: #e2e3e5;
+  }
+  &.is-invisible {
+    display: none;
+  }
+  &:hover, &:focus, &:active {
+    @include animation(move-on-hover, 0.6)
+  }
+  @include respond(1024) {
+    bottom: 16%;
+    border-color: #fff !important;
+  }
+}
+
+.section__container {
+  position: relative;
+  width: 90%;
+  @include center();
+
+  &.h-100 {
+    height: 100%;
+  }
+
+  @include respond(1024) {
+    width: 94%;
+  }
+}
+
+.section__line {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  bottom: 0;
+  background-color: #eb2227;
+  width: 3px;
+  height: 100%;
+  z-index: 1;
+
+  @include respond(1350) {
+    width: 2px;
+  }
+
+  @include respond(1024) {
+    left: 3%;
+  }
+  @include respond(767) {
+    width: 1px;
+  }
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 32%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 200px;
+  li {
+    display: inline-block;
+    margin: 0 7px;
+    background-color: #d1d3d3;
+    border-radius: 50%;
+    @include square(12px);
+    cursor: pointer;
+    button {
+      display: none;
+    }
+
+    &.slick-active {
+      background-color: #ec2227;
+    }
+  }
+
+  @include respond(1024) {
+    li {
+      @include square(10px);
+      margin: 0 8px;
+    }
+  }
+
+  @include respond(570) {
+    bottom: 30%;
+    //bottom: 29%;
+    //bottom: 30%;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  display: block;
+  margin: auto;
+  @include square(70px);
+  background-color: transparent;
+  font-size: 0;
+  outline: none !important;
+  z-index: 10;
+  cursor: pointer;
+  border: none !important;
+  border-radius: 0 !important;
+  &:before {
+    content: '';
+    display: block;
+    @include square(30px);
+    border-width: 0 5px 5px 0;
+    border-style: solid;
+    border-color: #d1d3d3;
+    background-color: transparent;
+    outline: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  &.slick-prev {
+    left: 2%;
+    &:before {
+      left: 11px;
+      @include rotate(135deg);
+    }
+  }
+  &.slick-next {
+    right: 2%;
+    &:before {
+      left: -15px;
+      @include rotate(-45deg);
+    }
+  }
+  &.slick-disabled {
+    display: none !important;
+  }
+}
+
+.modal__video-link {
+  position: absolute;
+  @include square(100%);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
+.play__icon {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include square(50px);
+  margin: auto;
+  background: url("#{$imgUrl}play-icon.svg") no-repeat center /contain;
+  z-index: 1;
+  @include respond(1024) {
+    @include square(30px);
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@-webkit-keyframes move-on-hover {
+  0%, 100% {
+    -webkit-transform: rotate(45deg) translateY(0px);
+    -ms-transform: rotate(45deg) translateY(0px);
+    transform: rotate(45deg) translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: rotate(45deg) translateY(3px);
+    -ms-transform: rotate(45deg) translateY(3px);
+    transform: rotate(45deg) translateY(3px);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) translateY(2px);
+    -ms-transform: rotate(45deg) translateY(2px);
+    transform: rotate(45deg) translateY(2px);
+  }
+}
+
+@keyframes move-on-hover {
+  0%, 100% {
+    -webkit-transform: rotate(45deg) translateY(0px);
+    -ms-transform: rotate(45deg) translateY(0px);
+    transform: rotate(45deg) translateY(0px);
+  }
+  25%, 75% {
+    -webkit-transform: rotate(45deg) translateY(3px);
+    -ms-transform: rotate(45deg) translateY(3px);
+    transform: rotate(45deg) translateY(3px);
+  }
+  50% {
+    -webkit-transform: rotate(45deg) translateY(2px);
+    -ms-transform: rotate(45deg) translateY(2px);
+    transform: rotate(45deg) translateY(2px);
+  }
+}

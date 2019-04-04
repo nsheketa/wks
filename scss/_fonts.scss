@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('#{$fontsUrl}GillSans-Bold.eot');
+  src: url('#{$fontsUrl}GillSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}GillSans-Bold.woff2') format('woff2'),
+  url('#{$fontsUrl}GillSans-Bold.woff') format('woff'),
+  url('#{$fontsUrl}GillSans-Bold.ttf') format('truetype'),
+  url('#{$fontsUrl}GillSans-Bold.svg#GillSans-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('#{$fontsUrl}GillSans-Light.eot');
+  src: url('#{$fontsUrl}GillSans-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}GillSans-Light.woff2') format('woff2'),
+  url('#{$fontsUrl}GillSans-Light.woff') format('woff'),
+  url('#{$fontsUrl}GillSans-Light.ttf') format('truetype'),
+  url('#{$fontsUrl}GillSans-Light.svg#GillSans-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('#{$fontsUrl}GillSans.eot');
+  src: url('#{$fontsUrl}GillSans.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}GillSans.woff2') format('woff2'),
+  url('#{$fontsUrl}GillSans.woff') format('woff'),
+  url('#{$fontsUrl}GillSans.ttf') format('truetype'),
+  url('#{$fontsUrl}GillSans.svg#GillSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans';
+  src: url('#{$fontsUrl}GillSans-SemiBold.eot');
+  src: url('#{$fontsUrl}GillSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}GillSans-SemiBold.woff2') format('woff2'),
+  url('#{$fontsUrl}GillSans-SemiBold.woff') format('woff'),
+  url('#{$fontsUrl}GillSans-SemiBold.ttf') format('truetype'),
+  url('#{$fontsUrl}GillSans-SemiBold.svg#GillSans-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura Std';
+  src: url('#{$fontsUrl}FuturaStd-Light.eot');
+  src: url('#{$fontsUrl}FuturaStd-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}FuturaStd-Light.woff2') format('woff2'),
+  url('#{$fontsUrl}FuturaStd-Light.woff') format('woff'),
+  url('#{$fontsUrl}FuturaStd-Light.ttf') format('truetype'),
+  url('#{$fontsUrl}FuturaStd-Light.svg#FuturaStd-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Wingdings';
+  src: url('#{$fontsUrl}Wingdings-Regular.eot');
+  src: url('#{$fontsUrl}Wingdings-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$fontsUrl}Wingdings-Regular.woff2') format('woff2'),
+  url('#{$fontsUrl}Wingdings-Regular.woff') format('woff'),
+  url('#{$fontsUrl}Wingdings-Regular.ttf') format('truetype'),
+  url('#{$fontsUrl}Wingdings-Regular.svg#Wingdings-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

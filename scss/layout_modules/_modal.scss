@@ -1,0 +1,136 @@
+#overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(34,31,31,0.7);
+  z-index: 99;
+  display: none;
+  @include transition(0.3s all ease-in-out);
+}
+
+.modal__video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 70%;
+  min-height: 350px;
+  margin: auto;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  @include transition(0.3s all ease-in-out);
+  z-index: -1;
+  //opacity: 0;
+  //visibility: hidden;
+  display: none;
+  &.is-active{
+    z-index: 100;
+    //opacity: 1;
+    //visibility: visible;
+  }
+
+  @include respond(1440){
+    //height: 70%;
+    height: 65%;
+  }
+
+  @include respond(1200){
+    //height: 70%;
+    height: 54%;
+  }
+
+  @include respond(1024){
+    //height: 50%;
+    height: 38%;
+  }
+  @include respond(768){
+    //height: 38%;
+    height: 31%;
+    min-height: 100px;
+  }
+
+  @include respond(570){
+    height: auto;
+    width: 90%;
+  }
+}
+
+.modal__close{
+  background: url("#{$imgUrl}icon-close.svg")no-repeat center;
+  -webkit-background-size: 50%;
+  background-size: 50%;
+  @include square(23px);
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: -25px;
+  top: -25px;
+  border: none;
+  z-index: 101;
+  display: block;
+  outline: none !important;
+  cursor: pointer;
+  @include respond(570){
+    right: -12px;
+    top: -12px;
+  }
+}
+
+.modal__inner{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.modal__video-item{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  video{
+    height: 100%;
+    width: auto;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  @include respond(570){
+    video{
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1990px){
+  .modal__video{
+    width: 55%;
+    height: auto;
+    min-height: 10px;
+  }
+  .modal__video-item{
+    video{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-height: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .modal__video{
+    height: 70%;
+    width: auto;
+  }
+  .modal__video-item{
+    video{
+      height: 100%;
+      width: auto;
+    }
+  }
+}

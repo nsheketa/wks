@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('GillSans-Bold.eot');
+    src: url('GillSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('GillSans-Bold.woff2') format('woff2'),
+        url('GillSans-Bold.woff') format('woff'),
+        url('GillSans-Bold.ttf') format('truetype'),
+        url('GillSans-Bold.svg#GillSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('GillSans-Light.eot');
+    src: url('GillSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('GillSans-Light.woff2') format('woff2'),
+        url('GillSans-Light.woff') format('woff'),
+        url('GillSans-Light.ttf') format('truetype'),
+        url('GillSans-Light.svg#GillSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('GillSans.eot');
+    src: url('GillSans.eot?#iefix') format('embedded-opentype'),
+        url('GillSans.woff2') format('woff2'),
+        url('GillSans.woff') format('woff'),
+        url('GillSans.ttf') format('truetype'),
+        url('GillSans.svg#GillSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wingdings';
+    src: url('Wingdings-Regular.eot');
+    src: url('Wingdings-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Wingdings-Regular.woff2') format('woff2'),
+        url('Wingdings-Regular.woff') format('woff'),
+        url('Wingdings-Regular.ttf') format('truetype'),
+        url('Wingdings-Regular.svg#Wingdings-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill Sans';
+    src: url('GillSans-SemiBold.eot');
+    src: url('GillSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('GillSans-SemiBold.woff2') format('woff2'),
+        url('GillSans-SemiBold.woff') format('woff'),
+        url('GillSans-SemiBold.ttf') format('truetype'),
+        url('GillSans-SemiBold.svg#GillSans-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('FuturaStd-Light.eot');
+    src: url('FuturaStd-Light.eot?#iefix') format('embedded-opentype'),
+        url('FuturaStd-Light.woff2') format('woff2'),
+        url('FuturaStd-Light.woff') format('woff'),
+        url('FuturaStd-Light.ttf') format('truetype'),
+        url('FuturaStd-Light.svg#FuturaStd-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

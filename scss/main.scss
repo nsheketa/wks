@@ -1,0 +1,19 @@
+@import "../modules/bootstrap/scss/bootstrap-grid";
+@import "../modules/bootstrap/scss/bootstrap";
+@import "../js/vendor/slick/slick.scss";
+
+@import "customVariables";
+@import "mixins";
+
+@import "fonts";
+
+@import "customStyles";
+
+//importing style modules for pages and section
+
+@import "layout_modules/text-style";
+@import "layout_modules/general-styles";
+@import "layout_modules/homepage";
+@import "layout_modules/loader";
+@import "layout_modules/modal";
+
