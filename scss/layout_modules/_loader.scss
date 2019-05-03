@@ -7,14 +7,14 @@
   @include square(100%);
   display: none;
 
-  @include respond(1024){
+  //@include respond(1024){
     &.is-visible{
       display: block;
     }
     &.is-hidden{
       display: none;
     }
-  }
+  //}
 }
 
 .page-loader__inner{

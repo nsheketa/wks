@@ -12,7 +12,8 @@ $(document).ready(function () {
             $body = $('body'),
             $window = $(window);
 
-        if ($window.width() <= 1024 && !$body.hasClass('is-loaded')) {
+        // if ($window.width() <= 1024 && !$body.hasClass('is-loaded')) {
+        if (!$body.hasClass('is-loaded')) {
             console.log('body is not loaded');
             loader.addClass('is-visible');
         }

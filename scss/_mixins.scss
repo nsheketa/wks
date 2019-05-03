@@ -50,6 +50,18 @@
   }
 }
 
+@mixin respond-min($view) {
+  @media screen and (min-width: $view+px) {
+    @content;
+  }
+}
+
+@mixin respond-min-max($view-sm, $view-lg) {
+  @media screen and (min-width: $view-sm+px) and (max-width: $view-lg+px) {
+    @content;
+  }
+}
+
 /*--------------TRANSITIONS AND ANIMATIONS----------------*/
 @mixin transition($property) {
   -webkit-transition: ($property);

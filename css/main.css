@@ -9377,11 +9377,10 @@ body {
   width: 100%;
   height: 100%;
   display: none; }
-  @media screen and (max-width: 1024px) {
-    .page-loader.is-visible {
-      display: block; }
-    .page-loader.is-hidden {
-      display: none; } }
+  .page-loader.is-visible {
+    display: block; }
+  .page-loader.is-hidden {
+    display: none; }
 
 .page-loader__inner {
   width: 250px;
