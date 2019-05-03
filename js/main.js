@@ -26,9 +26,9 @@ $(document).ready(function () {
     }
 
     function imgLoading() {
-        var $window = $(window);
+        // var $window = $(window);
 
-        if ($window.width() <= 1024) {
+        // if ($window.width() <= 1024) {
             $('.page__content').imagesLoaded({background: '.homepage-slider__img'})
                 .progress(function (instance, image) {
                     var result = image.isLoaded ? 'loaded' : 'broken';
@@ -55,9 +55,8 @@ $(document).ready(function () {
                     console.log('images loading done!');
                     loaderRemove();
                 })
-        }
+        // }
     }
-
 
     function lineStart() {
         var line = $('.section__line.section__line-start'),
